@@ -24,10 +24,10 @@
       <div class="navbar">
         <img src="./img/logo2.png" alt="logo" />
         <ul>
-          <li>About</li>
-          <li>My Skills</li>
-          <li>Portfolio</li>
-          <li>Contact</li>
+          <li>&lt;/About&gt;</li>
+          <li>&lt;/My Skills&gt;</li>
+          <li>&lt;/Portfolio&gt;</li>
+          <li>&lt;/Contact&gt;</li>
         </ul>
       </div>
       <div class="main">
@@ -36,20 +36,155 @@
           I'm Cesar, <br />
           <span>Full Stack Developer</span>
         </h1>
+        <div class="mainPhoto"></div>
+        <div class="mainBtns">
+          <a href="https://github.com/cesarzv" target="_blank"
+            ><img src="./img/ghub.png" alt="ghub"
+          /></a>
+          <a href="https://www.linkedin.com/in/cesarzv/" target="_blank"
+            ><img src="./img/linkedin.png" alt="linkedin"
+          /></a>
+          <a href="https://wa.me/+51946661882" target="_blank"
+            ><img src="./img/wsp.png" alt="wsp"
+          /></a>
+        </div>
       </div>
       <div class="about">
         <h2>About me</h2>
         <div class="aboutInfo">
           <div class="aboutImg">
-            <img src="./img/dev.jpg" alt="dev" />
+            <img src="./img/dev.png" alt="dev" />
           </div>
           <div class="aboutP">
             <p>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
-              quae labore voluptas perspiciatis minus, quibusdam sequi vel.
-              Labore, omnis, ipsum sequi non harum necessitatibus nam doloribus
-              laboriosam molestiae veniam eos!
+              I'm a Full Stack Developer. I have experience working with
+              JavaScript, Node.js, React, Redux, SQL, among other technologies
+              in the sector. I consider myself a responsible person with
+              creative thinking, problem solving and teamwork.
             </p>
+            <button>Download CV</button>
+          </div>
+        </div>
+      </div>
+      <div class="skills">
+        <h2>Skills</h2>
+        <div class="skillsCont">
+          <div class="card">
+            <img class="cardImg" src="./img/html.png" alt="" />
+            <h3>HTML</h3>
+          </div>
+          <div class="card">
+            <img class="cardImg" src="./img/css.png" alt="" />
+            <h3>CSS</h3>
+          </div>
+          <div class="card">
+            <img class="cardImg" src="./img/js.png" alt="" />
+            <h3>JavaScript</h3>
+          </div>
+          <div class="card">
+            <img class="cardImg" src="./img/react.png" alt="" />
+            <h3>React</h3>
+          </div>
+          <div class="card">
+            <img class="cardImg" src="./img/redux.png" alt="" />
+            <h3>Redux</h3>
+          </div>
+          <div class="card">
+            <img class="cardImg" src="./img/node.png" alt="" />
+            <h3>Node.js</h3>
+          </div>
+          <div class="card">
+            <img class="cardImg" src="./img/ex.png" alt="" />
+            <h3>Express</h3>
+          </div>
+          <div class="card">
+            <img class="cardImg" src="./img/sequelize.png" alt="" />
+            <h3>Sequelize</h3>
+          </div>
+          <div class="card">
+            <img class="cardImg" src="./img/postgres.png" alt="" />
+            <h3>PostgreSQL</h3>
+          </div>
+          <div class="card">
+            <img class="cardImg" src="./img/sass.png" alt="" />
+            <h3>Sass</h3>
+          </div>
+          <div class="card">
+            <img class="cardImg" src="./img/tailwind.png" alt="" />
+            <h3>Tailwind CSS</h3>
+          </div>
+          <div class="card">
+            <img class="cardImg" src="./img/git.png" alt="" />
+            <h3>Git</h3>
+          </div>
+        </div>
+      </div>
+      <div class="contacto" id="contacto">
+        <h1 data-section="contacto" data-value="title">Contacto</h1>
+
+        <div
+          class="container_box--contacto"
+          data-aos="fade-up"
+          data-aos-anchor-placement="center-bottom"
+        >
+          <div class="container--contacto">
+            <form
+              id="form"
+              class="form-contact"
+              action="https://formsubmit.co/joacodileo@gmail.com"
+              method="POST"
+              name="contacto-portafolio"
+              netlify
+            >
+              <input
+                type="hidden"
+                name="_subject"
+                value="Nuevo correo del PORTAFOLIO"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://dileoportafolio.vercel.app/"
+              />
+              <input
+                id="nombre"
+                type="text"
+                name="name"
+                placeholder="Ingrese su nombre..."
+                title="Nombre solo acepta letras y espacios en blanco."
+                pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$"
+                required
+              />
+              <input
+                id="email"
+                type="email"
+                name="email"
+                placeholder="Ingrese su email..."
+                title="Email incorrecto."
+                pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
+                required
+              />
+              <textarea
+                id="mensaje"
+                cols="20"
+                rows="4"
+                name="message"
+                placeholder="Déjame un mensaje!"
+                required
+              ></textarea>
+
+              <div class="btn_form--contacto">
+                <button
+                  id="btn-enviar"
+                  type="submit"
+                  data-section="contacto"
+                  data-value="btn-enviar"
+                >
+                  Enviar
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
