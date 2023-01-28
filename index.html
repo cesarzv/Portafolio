@@ -12,6 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;800&display=swap"
       rel="stylesheet"
     />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <title>CesarZV Portfolio</title>
   </head>
   <body class="contBody">
@@ -24,10 +25,18 @@
       <div class="navbar">
         <img src="./img/logo2.png" alt="logo" />
         <ul>
-          <li>&lt;/About&gt;</li>
-          <li>&lt;/My Skills&gt;</li>
-          <li>&lt;/Portfolio&gt;</li>
-          <li>&lt;/Contact&gt;</li>
+          <a style="text-decoration: none" href="#about"
+            ><li>&lt;/About&gt;</li></a
+          >
+          <a style="text-decoration: none" href="#skills"
+            ><li>&lt;/My Skills&gt;</li></a
+          >
+          <a style="text-decoration: none" href="#portfolio"
+            ><li>&lt;/Portfolio&gt;</li></a
+          >
+          <a style="text-decoration: none" href="#contact"
+            ><li>&lt;/Contact&gt;</li></a
+          >
         </ul>
       </div>
       <div class="main">
@@ -49,89 +58,133 @@
           /></a>
         </div>
       </div>
-      <div class="about">
+      <div id="about" class="about">
         <h2>About me</h2>
         <div class="aboutInfo">
           <div class="aboutImg">
-            <img src="./img/dev.png" alt="dev" />
+            <img
+              class="dev"
+              src="./img/dev.png"
+              alt="dev"
+              data-aos="fade-right"
+            />
           </div>
           <div class="aboutP">
             <p>
-              I'm a Full Stack Developer. I have experience working with
-              JavaScript, Node.js, React, Redux, SQL, among other technologies
-              in the sector. I consider myself a responsible person with
-              creative thinking, problem solving and teamwork.
+              I'm a <span class="resaltar">Full Stack Developer</span>. I have
+              experience working with JavaScript, Node.js, React, Redux, SQL,
+              among other technologies in the sector. I consider myself a
+              responsible person with creative thinking, problem solving and
+              teamwork.
             </p>
-            <button>Download CV</button>
+            <a href="./img/Cesar Zegarra CV.pdf" target="_blank"
+              ><button>Download CV</button></a
+            >
           </div>
         </div>
       </div>
-      <div class="skills">
+      <div id="skills" class="skills">
         <h2>Skills</h2>
         <div class="skillsCont">
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/html.png" alt="" />
             <h3>HTML</h3>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/css.png" alt="" />
             <h3>CSS</h3>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/js.png" alt="" />
             <h3>JavaScript</h3>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/react.png" alt="" />
             <h3>React</h3>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/redux.png" alt="" />
             <h3>Redux</h3>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/node.png" alt="" />
             <h3>Node.js</h3>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/ex.png" alt="" />
             <h3>Express</h3>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/sequelize.png" alt="" />
             <h3>Sequelize</h3>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/postgres.png" alt="" />
             <h3>PostgreSQL</h3>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/sass.png" alt="" />
             <h3>Sass</h3>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/tailwind.png" alt="" />
             <h3>Tailwind CSS</h3>
           </div>
-          <div class="card">
+          <div class="card" data-aos="fade-up" data-aos-duration="500">
             <img class="cardImg" src="./img/git.png" alt="" />
             <h3>Git</h3>
           </div>
         </div>
       </div>
+      <div id="portfolio" class="portfolio">
+        <h2>Portfolio</h2>
+        <div class="portfolioCont">
+          <div class="cardd">
+            <img class="img" src="./img/supra.jpg" alt="" />
+            <div class="textBox">
+              <p class="textHead">Ecommerce Supra Sports</p>
+              <!-- <span>text</span> -->
+              <div class="btnsCard">
+                <a href="https://suprasports.vercel.app/" target="_blank"
+                  ><button><img src="./img/eye.png" alt="" />Demo</button></a
+                >
+                <a href="https://github.com/Caarlos94/eCommerce" target="_blank"
+                  ><button><img src="./img/ghub.png" alt="" />Repo</button></a
+                >
+              </div>
+            </div>
+          </div>
+
+          <div class="cardd">
+            <img class="img" src="./img/dogs.jpg" alt="" />
+            <div class="textBox">
+              <p class="textHead">Henry Dogs App</p>
+              <!-- <span>text</span> -->
+              <div class="btnsCard">
+                <a href="https://pi-dogs-cesarzv.vercel.app/" target="_blank"
+                  ><button><img src="./img/eye.png" alt="" />Demo</button></a
+                >
+                <a href="https://github.com/cesarzv/PI-Dogs" target="_blank"
+                  ><button><img src="./img/ghub.png" alt="" />Repo</button></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
       <div class="contacto" id="contacto">
-        <h1 data-section="contacto" data-value="title">Contacto</h1>
+        <h2 data-section="contacto" data-value="title">Contact</h2>
 
         <div
-          class="container_box--contacto"
+          class="contContacto"
           data-aos="fade-up"
           data-aos-anchor-placement="center-bottom"
         >
-          <div class="container--contacto">
+          <div class="containerContacto">
             <form
               id="form"
-              class="form-contact"
-              action="https://formsubmit.co/joacodileo@gmail.com"
+              class="formContact"
+              action="https://formsubmit.co/cesarzegarrav26@gmail.com"
               method="POST"
               name="contacto-portafolio"
               netlify
@@ -145,7 +198,7 @@
               <input
                 type="hidden"
                 name="_next"
-                value="https://dileoportafolio.vercel.app/"
+                value="https://cesarzv-portfolio.vercel.app/"
               />
               <input
                 id="nombre"
@@ -174,7 +227,7 @@
                 required
               ></textarea>
 
-              <div class="btn_form--contacto">
+              <div class="btnContact">
                 <button
                   id="btn-enviar"
                   type="submit"
@@ -188,6 +241,14 @@
           </div>
         </div>
       </div>
+      <footer>
+        <p>Designed & Built by Cesar Zegarra</p>
+      </footer>
     </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <script src="app.js"></script>
   </body>
 </html>
