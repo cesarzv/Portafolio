@@ -7,6 +7,11 @@ body::-webkit-scrollbar-thumb {
   border-radius: 50px;
 }
 
+::selection {
+  background-color: #00adef;
+  color: black;
+}
+
 .contBody {
   background-color: rgb(26, 26, 27);
 }
@@ -201,7 +206,7 @@ body::-webkit-scrollbar-thumb {
     1595px 1024px #fff, 277px 1756px #fff, 1745px 322px #fff, 908px 447px #fff,
     1259px 101px #fff, 1450px 1297px #fff, 528px 324px #fff, 1285px 612px #fff,
     1154px 1208px #fff, 1048px 1588px #fff, 1105px 1439px #fff, 408px 900px #fff;
-  animation: animStar 50s linear infinite;
+  animation: animStar 150s linear infinite;
 }
 #stars:after {
   content: " ";
@@ -715,13 +720,37 @@ body::-webkit-scrollbar-thumb {
   width: 100%;
   height: 85vh;
   padding-top: 100px;
+  display: flex;
+}
+
+.mainText {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: center;
+  position: relative;
+}
+
+.mainTitle {
+  margin-left: 15%;
+  position: absolute;
+  top: 15%;
+}
+
+.photo {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .main h1 {
   font-size: 70px;
   font-weight: bolder;
-  margin-left: 10%;
-  margin-top: 10%;
+  /* margin-left: 10%; */
+  /* margin-top: 10%; */
 }
 
 .main span {
@@ -730,10 +759,38 @@ body::-webkit-scrollbar-thumb {
   font-family: monospace;
   white-space: nowrap;
   border-right: 4px solid;
-  width: 12ch;
-  animation: typing 3s steps(20) alternate infinite;
+  width: 20ch;
+  /* animation: typing 3s steps(20) alternate infinite; */
+  animation: escribiendo 5s steps(20), parpadeo 0.4s infinite alternate;
   overflow: hidden;
 }
+
+@keyframes escribiendo {
+  from {
+    width: 0;
+  }
+}
+
+@keyframes parpadeo {
+  70% {
+    border-color: transparent;
+  }
+}
+
+/* @keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 48%;
+  }
+} */
+
+/* @keyframes blink {
+  50% {
+    border-color: transparent;
+  }
+} */
 
 .mainPhoto {
   background-image: url("./img/foto.jpg");
@@ -743,9 +800,9 @@ body::-webkit-scrollbar-thumb {
   height: 350px;
   width: 350px;
   border-radius: 50%;
-  position: absolute;
+  /* position: absolute;
   top: 30%;
-  right: 20%;
+  right: 20%; */
   cursor: crosshair;
 }
 
@@ -753,7 +810,8 @@ body::-webkit-scrollbar-thumb {
   width: 200px;
   height: 50px;
   position: absolute;
-  margin-left: 10%;
+  margin-left: 15%;
+  top: 58%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -772,21 +830,6 @@ body::-webkit-scrollbar-thumb {
 
 .mainBtns a img:hover {
   transform: scale(1.1);
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 48%;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
 }
 
 .about {
@@ -1000,8 +1043,15 @@ body::-webkit-scrollbar-thumb {
   letter-spacing: 1px;
 }
 
+.formContact input:-webkit-autofill,
+.formContact input:-webkit-autofill:hover,
+.formContact input:-webkit-autofill:focus,
+.formContact input:-webkit-autofill:active {
+  -webkit-box-shadow: none;
+}
+
 .formContact input::placeholder {
-  color: var(--light-grey);
+  color: white;
 }
 
 .formContact .input-invalid {
@@ -1025,7 +1075,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .formContact textarea::placeholder {
-  color: var(--light-grey);
+  color: white;
 }
 
 .formContact textarea::-webkit-scrollbar {
@@ -1078,13 +1128,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .portfolioCont {
-  width: 80%;
+  width: 100%;
   height: 400px;
-  /* display: grid;
-  justify-content: center;
-  gap: 30px;
-  grid-auto-rows: 30rem;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -1115,8 +1160,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cardd {
-  width: 38%;
-  height: 70%;
+  height: 250px;
+  width: 500px;
   background: #313131;
   display: flex;
   flex-direction: column;
@@ -1239,6 +1284,55 @@ footer p {
   font-size: 12px;
 }
 
+/* @media (max-width: 768px) {
+  .portfolio {
+    border: 2px solid blue;
+    height: 700px;
+  }
+
+  .portfolioCont {
+    flex-direction: column;
+    justify-content: center;
+    height: 80%;
+    border: 2px solid yellow;
+  }
+
+  .cardd {
+    height: 45%;
+    width: 100%;
+    border: 2px solid red;
+  }
+} */
+
+@media (max-width: 649px) {
+  .portfolioCont {
+  }
+
+  .cardd {
+    height: 180px;
+    width: 330px;
+  }
+
+  .textHead {
+    font-size: 20px;
+  }
+
+  .mainTitle h1 {
+    font-size: 10px;
+  }
+}
+
+@media (min-width: 650px) and (max-width: 999px) {
+  .portfolioCont {
+    width: 100%;
+  }
+
+  .cardd {
+    height: 200px;
+    width: 380px;
+  }
+}
+
 @media (max-width: 1000px) {
   .navbar {
     background-color: rgb(26, 26, 27, 0.95);
@@ -1264,10 +1358,15 @@ footer p {
 
   .nav-ul__active {
     right: -12%;
+    z-index: 1000;
   }
 
   .bars__menu {
     display: block;
+  }
+
+  .photo {
+    width: 100%;
   }
 
   .mainPhoto {
@@ -1279,6 +1378,25 @@ footer p {
 
   .main {
     margin-bottom: 100px;
+    flex-direction: column;
+  }
+
+  .mainText {
+    width: 100%;
+  }
+
+  .mainTitle {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .main h1 {
+    font-size: 50px;
+  }
+
+  .mainBtns {
+    top: 80%;
+    margin-left: 0;
   }
 
   .about {
@@ -1318,8 +1436,8 @@ footer p {
   }
 
   .cardd {
-    height: 35%;
-    width: 100%;
+    max-height: 300px;
+    max-width: 480px;
   }
 
   .contContacto {
