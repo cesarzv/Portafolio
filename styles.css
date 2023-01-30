@@ -650,13 +650,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .navbar img {
-  width: 5%;
+  width: 100px;
   margin-left: 5%;
   /* filter: brightness(0) saturate(100%) invert(20%) sepia(74%) saturate(5033%)
     hue-rotate(225deg) brightness(105%) contrast(99%); */
 }
 
-.navbar ul {
+.nav-ul {
   display: flex;
   align-items: center;
   gap: 70px;
@@ -664,7 +664,7 @@ body::-webkit-scrollbar-thumb {
   margin-right: 10%;
 }
 
-.navbar ul li {
+.nav-ul li {
   color: white;
   font-family: monospace;
   font-size: 20px;
@@ -673,8 +673,42 @@ body::-webkit-scrollbar-thumb {
   transition: all 0.3s;
 }
 
-.navbar ul li:hover {
+.nav-ul li:hover {
   color: #00adef;
+}
+
+.bars__menu {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  right: 5%;
+  transform: scale(1.5);
+  cursor: pointer;
+  display: none;
+}
+
+.bars__menu span {
+  display: block;
+  width: 90%;
+  height: 2.5px;
+  background-color: #00adef;
+  margin-top: 6px;
+  border-radius: 5px;
+  transform-origin: 0px 100%;
+  transition: all 0.3s;
+}
+
+.activeline1__bars-menu {
+  transform: rotate(45deg) translate(-2px, 1px);
+}
+
+.activeline2__bars-menu {
+  opacity: 0;
+  margin-left: -30px;
+}
+
+.activeline3__bars-menu {
+  transform: rotate(-45deg) translate(-1px, 1px);
 }
 
 .main {
@@ -795,12 +829,14 @@ body::-webkit-scrollbar-thumb {
 
 .dev:hover {
   transform: rotate(5deg) scale(1.05);
-  transition: 0.3s;
+  transition: all 0.3s;
 }
 
 .aboutP {
   width: 60%;
   position: relative;
+  display: flex;
+  flex-direction: column;
 }
 
 .aboutP p {
@@ -811,9 +847,22 @@ body::-webkit-scrollbar-thumb {
   line-height: 40px;
 }
 
+.aBtn {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.aBtn a {
+  width: 150px;
+}
+
 .aboutP button {
   font-size: 1rem;
-  padding: 0.8em 2em;
+  width: 150px;
+  height: 50px;
   background-color: transparent;
   border: 3px solid #00adef;
   border-radius: 1em;
@@ -823,10 +872,11 @@ body::-webkit-scrollbar-thumb {
   font-weight: bolder;
   transition: cubic-bezier(0.68, -0.55, 0.265, 1.55) 0.4s;
   box-shadow: -5px 5px 0px 0px #00adef;
-  position: absolute;
-  bottom: 35%;
-  left: 40%;
+
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .aboutP button:hover {
@@ -851,6 +901,7 @@ body::-webkit-scrollbar-thumb {
 .skillsCont {
   width: 70%;
   display: grid;
+  justify-content: center;
   place-items: center;
   gap: 10px;
   grid-auto-rows: 20rem;
@@ -895,10 +946,13 @@ body::-webkit-scrollbar-thumb {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
 }
 
 .contContacto {
-  width: 40%;
+  width: 50%;
+  display: flex;
+  justify-content: center;
 }
 
 .contacto h2 {
@@ -914,14 +968,13 @@ body::-webkit-scrollbar-thumb {
 }
 
 .containerContacto {
-  width: 100%;
+  width: 90%;
   border-radius: 24px;
   padding: 3rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .container_text--contacto {
   width: 100%;
 }
@@ -1010,6 +1063,7 @@ body::-webkit-scrollbar-thumb {
 
 .portfolio {
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1024,12 +1078,17 @@ body::-webkit-scrollbar-thumb {
 }
 
 .portfolioCont {
-  width: 70%;
-  display: grid;
-  place-items: center;
+  width: 80%;
+  height: 400px;
+  /* display: grid;
+  justify-content: center;
   gap: 30px;
   grid-auto-rows: 30rem;
-  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(20rem, 1fr)); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 100px;
 }
 
 .portCard {
@@ -1041,7 +1100,7 @@ body::-webkit-scrollbar-thumb {
 
 .portCardImg {
   width: 100%;
-  height: 60%;
+  height: 50%;
   background-position: top;
   background-size: cover;
   border-radius: 10px 10px 0px 0px;
@@ -1056,8 +1115,8 @@ body::-webkit-scrollbar-thumb {
 }
 
 .cardd {
-  width: 100%;
-  height: 50%;
+  width: 38%;
+  height: 70%;
   background: #313131;
   display: flex;
   flex-direction: column;
@@ -1135,6 +1194,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 16px;
   font-weight: 500;
   transition: all 0.3s;
+  background-color: rgba(255, 255, 255, 0.29);
 }
 
 .btnsCard button:hover {
@@ -1177,4 +1237,100 @@ footer p {
   color: white;
   font-family: monospace;
   font-size: 12px;
+}
+
+@media (max-width: 1000px) {
+  .navbar {
+    background-color: rgb(26, 26, 27, 0.95);
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar img {
+    width: 70px;
+  }
+
+  .nav-ul {
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(26, 26, 27, 0.95);
+    backdrop-filter: blur(5px);
+    width: 100vw;
+    height: 100vh;
+    top: 80%;
+    right: -130%;
+    padding-top: 100px;
+    transition: all 0.6s;
+  }
+
+  .nav-ul__active {
+    right: -12%;
+  }
+
+  .bars__menu {
+    display: block;
+  }
+
+  .mainPhoto {
+    top: 73%;
+    left: 10%;
+    height: 300px;
+    width: 300px;
+  }
+
+  .main {
+    margin-bottom: 100px;
+  }
+
+  .about {
+    height: 1000px;
+  }
+
+  .aboutInfo {
+    flex-direction: column;
+    align-items: center;
+
+    height: 150%;
+  }
+
+  .aboutImg {
+    width: 80%;
+  }
+
+  .dev {
+    width: 95%;
+  }
+
+  .aboutP {
+    width: 80%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .aboutP p {
+    font-size: 20px;
+  }
+
+  .portfolioCont {
+    flex-direction: column;
+    justify-content: center;
+    height: 500px;
+  }
+
+  .cardd {
+    height: 35%;
+    width: 100%;
+  }
+
+  .contContacto {
+    width: 90%;
+  }
+
+  .formContact input {
+    font-size: 17px;
+  }
+
+  .formContact textarea {
+    font-size: 17px;
+  }
 }

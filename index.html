@@ -24,7 +24,7 @@
       </div>
       <div class="navbar">
         <img src="./img/logo2.png" alt="logo" />
-        <ul>
+        <ul class="nav-ul">
           <a style="text-decoration: none" href="#about"
             ><li>&lt;/About&gt;</li></a
           >
@@ -38,6 +38,11 @@
             ><li>&lt;/Contact&gt;</li></a
           >
         </ul>
+        <div class="bars__menu">
+          <span class="line1__bars-menu"></span>
+          <span class="line2__bars-menu"></span>
+          <span class="line3__bars-menu"></span>
+        </div>
       </div>
       <div class="main">
         <h1>
@@ -77,9 +82,14 @@
               responsible person with creative thinking, problem solving and
               teamwork.
             </p>
-            <a href="./img/Cesar Zegarra CV.pdf" target="_blank"
-              ><button>Download CV</button></a
-            >
+            <div class="aBtn">
+              <a
+                style="text-decoration: none"
+                href="./img/Cesar Zegarra CV.pdf"
+                target="_blank"
+                ><button>Download CV</button></a
+              >
+            </div>
           </div>
         </div>
       </div>
@@ -172,7 +182,7 @@
           </div>
         </div>
       </div>
-      <div class="contacto" id="contacto">
+      <div class="contacto" id="contact">
         <h2 data-section="contacto" data-value="title">Contact</h2>
 
         <div
@@ -204,7 +214,7 @@
                 id="nombre"
                 type="text"
                 name="name"
-                placeholder="Ingrese su nombre..."
+                placeholder="Enter your name..."
                 title="Nombre solo acepta letras y espacios en blanco."
                 pattern="^[A-Za-zÑñÁáÉéÍíÓóÚú\s]+$"
                 required
@@ -213,7 +223,7 @@
                 id="email"
                 type="email"
                 name="email"
-                placeholder="Ingrese su email..."
+                placeholder="Enter your email..."
                 title="Email incorrecto."
                 pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$"
                 required
@@ -223,7 +233,7 @@
                 cols="20"
                 rows="4"
                 name="message"
-                placeholder="Déjame un mensaje!"
+                placeholder="Leave me a message!"
                 required
               ></textarea>
 
@@ -234,7 +244,7 @@
                   data-section="contacto"
                   data-value="btn-enviar"
                 >
-                  Enviar
+                  Send
                 </button>
               </div>
             </form>
@@ -249,6 +259,6 @@
     <script>
       AOS.init();
     </script>
-    <script src="app.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
