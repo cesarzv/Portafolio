@@ -765,6 +765,10 @@ body::-webkit-scrollbar-thumb {
   overflow: hidden;
 }
 
+.main span br {
+  display: none;
+}
+
 @keyframes escribiendo {
   from {
     width: 0;
@@ -1317,8 +1321,28 @@ footer p {
     font-size: 20px;
   }
 
-  .mainTitle h1 {
-    font-size: 10px;
+  .main span {
+    width: 10ch;
+    animation: escribiendo 2s steps(10), parpadeo 0.4s infinite alternate;
+    overflow: hidden;
+  }
+
+  .main span br {
+    display: block;
+  }
+
+  .mainText {
+    position: relative;
+  }
+
+  .mainTitle {
+    top: 1%;
+  }
+
+  .mainBtns {
+    position: absolute;
+    bottom: 0;
+    margin-left: 0;
   }
 }
 
@@ -1330,6 +1354,10 @@ footer p {
   .cardd {
     height: 200px;
     width: 380px;
+  }
+
+  .mainText {
+    margin-left: 11%;
   }
 }
 
@@ -1450,5 +1478,29 @@ footer p {
 
   .formContact textarea {
     font-size: 17px;
+  }
+}
+
+@media (min-width: 1001px) and (max-width: 1450px) {
+  .main span br {
+    display: block;
+    border: 1px solid pink;
+  }
+
+  .main span {
+    width: 10ch;
+    animation: escribiendo 2s steps(10), parpadeo 0.4s infinite alternate;
+    overflow: hidden;
+  }
+
+  .mainText {
+  }
+
+  .mainTitle {
+    top: 1%;
+  }
+
+  .mainBtns {
+    margin-left: 15%;
   }
 }
