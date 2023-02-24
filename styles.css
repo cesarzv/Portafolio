@@ -1133,11 +1133,11 @@ body::-webkit-scrollbar-thumb {
 
 .portfolioCont {
   width: 100%;
-  height: 400px;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 100px;
+  flex-wrap: wrap;
 }
 
 .portCard {
@@ -1162,7 +1162,6 @@ body::-webkit-scrollbar-thumb {
   font-family: monospace;
   font-size: 20px;
 }
-
 .cardd {
   height: 250px;
   width: 500px;
@@ -1308,14 +1307,21 @@ footer p {
   }
 } */
 
+@media (max-width: 450px) {
+  .cardd {
+    height: 160px;
+    width: 320px;
+  }
+}
+
 @media (max-width: 649px) {
   .portfolioCont {
   }
 
-  .cardd {
-    height: 180px;
-    width: 330px;
-  }
+  /* .cardd {
+    min-height: 150px;
+    max-width: 290px;
+  } */
 
   .textHead {
     font-size: 20px;
@@ -1351,10 +1357,10 @@ footer p {
     width: 100%;
   }
 
-  .cardd {
-    height: 200px;
-    width: 380px;
-  }
+  /* .cardd {
+    min-height: 150px;
+    max-width: 290px;
+  } */
 
   .mainText {
     margin-left: 11%;
@@ -1455,17 +1461,18 @@ footer p {
 
   .aboutP p {
     font-size: 20px;
+    text-align: center;
   }
 
   .portfolioCont {
     flex-direction: column;
     justify-content: center;
-    height: 500px;
+    align-items: center;
   }
 
   .cardd {
-    max-height: 300px;
-    max-width: 480px;
+    height: 180px;
+    width: 360px;
   }
 
   .contContacto {
